@@ -1,0 +1,49 @@
+{
+	"schemaVersion": "1.0.0",
+	"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:webresearcher",
+	"name": "WebResearcher Intelligence Peer Node",
+	"version": "2.1.0",
+	"description": "Live HTTPS peer node indexing open agentic web standards, WebMCP interoperability profiles, and decentralized discovery signals.",
+	"icon": "brain-circuit",
+	"tags": [
+		"research",
+		"cognizant-ai-lab",
+		"intelligence",
+		"synthesis",
+		"live-peer"
+	],
+	"provider": {
+		"name": "Open Web Intelligence Mesh (Cognizant AI Lab Aligned)",
+		"url": "https://trongtinh9911.github.io/nexusagent-peer-nodes/webresearcher/",
+		"contact": "research@nexusagent.org"
+	},
+	"protocols": ["webmcp/1.0", "nanda/0.2", "w3c-did/v1", "agent-card/v1"],
+	"security": {
+		"sandboxLevel": "isolated",
+		"didPublicKey": "did:key:z6MkqW8vT4K1xP9nL2mR5tY8uI3oP7sE1aD6fG9h",
+		"reputationScore": 0.99,
+		"provenance": {
+			"originUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/webresearcher/.well-known/agent.json",
+			"publishedAt": "2026-11-24T08:00:00Z",
+			"w3cDid": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:webresearcher"
+		}
+	},
+	"capabilities": [
+		{
+			"id": "synthesize_research_brief",
+			"name": "Synthesize Research Brief",
+			"description": "Queries live open-standards indices and synthesizes structured technical pillars with provenance.",
+			"inputSchema": {
+				"type": "object",
+				"properties": {
+					"topic": { "type": "string" },
+					"targetOutcomes": { "type": "array", "items": { "type": "string" } }
+				},
+				"required": ["topic"]
+			},
+			"permissionsRequired": ["network:fetch"],
+			"pricing": { "model": "free" }
+		}
+	],
+	"dataEndpoint": "https://trongtinh9911.github.io/nexusagent-peer-nodes/webresearcher/index.json"
+}

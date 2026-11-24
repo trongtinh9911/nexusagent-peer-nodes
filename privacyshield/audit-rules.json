@@ -1,0 +1,51 @@
+{
+	"nodeId": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:privacyshield",
+	"rulesetVersion": "2026.11.24",
+	"updatedAt": "2026-11-24T08:00:00Z",
+	"standard": "Mozilla Enhanced Tracking Protection (ETP) + Sec-GPC: 1",
+	"verifiedBy": "PrivacyShield Live Peer Node (ETP Ruleset v2026.11)",
+	"cleanDomains": [
+		"trongtinh9911.github.io",
+		"mozilla.org",
+		"w3.org",
+		"wikipedia.org",
+		".edu",
+		".org"
+	],
+	"knownTrackers": [
+		{
+			"name": "Google Analytics 4",
+			"category": "Analytics",
+			"risk": "Low",
+			"blockedByDefault": false
+		},
+		{
+			"name": "Meta Pixel",
+			"category": "Behavioral Profiling",
+			"risk": "High",
+			"blockedByDefault": true
+		},
+		{
+			"name": "FingerprintJS Pro",
+			"category": "Canvas Fingerprinting",
+			"risk": "Critical",
+			"blockedByDefault": true
+		},
+		{
+			"name": "Criteo Retargeting Beacon",
+			"category": "Cross-Site Ad Sync",
+			"risk": "High",
+			"blockedByDefault": true
+		}
+	],
+	"cookieFlagsBaseline": {
+		"secure": true,
+		"httpOnly": true,
+		"sameSite": "Strict"
+	},
+	"userActionRecommendations": [
+		"Enforce Total Cookie Protection (TCP) state partitioning for cross-origin iframes",
+		"Send Global Privacy Control (Sec-GPC: 1) header on all agentic fetches",
+		"Audit Content-Security-Policy connect-src allowlists for unauthorized telemetry endpoints"
+	]
+}

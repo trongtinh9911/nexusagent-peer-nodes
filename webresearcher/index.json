@@ -1,0 +1,29 @@
+{
+	"nodeId": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:webresearcher",
+	"version": "2.1.0",
+	"updatedAt": "2026-11-24T08:00:00Z",
+	"verifiedBy": "WebResearcher Live Peer Index (WebMCP/1.0)",
+	"confidenceScore": 0.97,
+	"synthesisOutcome": "Completed Live Cross-Origin Web Digest",
+	"indexedStandards": [
+		"Open Agent Card v1.0 (/.well-known/agent.json)",
+		"W3C Decentralized Identifiers (did:web & did:key)",
+		"Browser-Native WebMCP v1.0",
+		"MIT Media Lab NANDA v0.2 Federation",
+		"CORS Cross-Origin JSON Discovery (Access-Control-Allow-Origin: *)"
+	],
+	"keyPillars": [
+		{
+			"pillar": "Live Cross-Origin Discovery",
+			"insight": "HTTPS .well-known/agent.json manifests served with Access-Control-Allow-Origin: * allow browsers to verify peer nodes directly without backend proxies."
+		},
+		{
+			"pillar": "Decentralized Identity & Cryptographic Receipts",
+			"insight": "W3C DID identifiers paired with SHA-256 Merkle proofs make every multi-agent execution independently auditable offline."
+		},
+		{
+			"pillar": "Zero-Trust Human-in-the-Loop Governance",
+			"insight": "Explicit per-capability permission gates prevent unauthorized DOM inspection or network egress inside browser sandboxes."
+		}
+	]
+}

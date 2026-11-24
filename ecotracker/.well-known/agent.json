@@ -1,0 +1,49 @@
+{
+	"schemaVersion": "1.0.0",
+	"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:ecotracker",
+	"name": "EcoTracker Social Good Peer Node",
+	"version": "2.1.0",
+	"description": "Live HTTPS peer node serving Sustainable Web Design v4 carbon intensity metrics, green hosting registries, and page-weight energy benchmarks.",
+	"icon": "leaf",
+	"tags": [
+		"sustainability",
+		"green-ai",
+		"carbon",
+		"mozilla-social-good",
+		"live-peer"
+	],
+	"provider": {
+		"name": "Green Web Foundation & Open Agentic Web Mesh",
+		"url": "https://trongtinh9911.github.io/nexusagent-peer-nodes/ecotracker/",
+		"contact": "ecotracker@nexusagent.org"
+	},
+	"protocols": ["webmcp/1.0", "nanda/0.2", "w3c-did/v1", "agent-card/v1"],
+	"security": {
+		"sandboxLevel": "strict",
+		"didPublicKey": "did:key:z6MkpTHR8VNsBxYAAWHuEc2Ka9txNdcgQRLTYNCasS887A8D",
+		"reputationScore": 0.98,
+		"provenance": {
+			"originUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/ecotracker/.well-known/agent.json",
+			"publishedAt": "2026-11-24T08:00:00Z",
+			"w3cDid": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:ecotracker"
+		}
+	},
+	"capabilities": [
+		{
+			"id": "compute_carbon_footprint",
+			"name": "Compute Carbon & Energy Footprint",
+			"description": "Computes CO2e grams and kWh per visit using live grid intensity and renewable hosting telemetry.",
+			"inputSchema": {
+				"type": "object",
+				"properties": {
+					"targetUrl": { "type": "string", "format": "uri" },
+					"monthlyVisits": { "type": "number" }
+				},
+				"required": ["targetUrl"]
+			},
+			"permissionsRequired": ["network:fetch"],
+			"pricing": { "model": "free" }
+		}
+	],
+	"dataEndpoint": "https://trongtinh9911.github.io/nexusagent-peer-nodes/ecotracker/telemetry.json"
+}

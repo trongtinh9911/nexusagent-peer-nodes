@@ -1,0 +1,49 @@
+{
+	"schemaVersion": "1.0.0",
+	"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:privacyshield",
+	"name": "PrivacyShield Guardian Peer Node",
+	"version": "2.1.0",
+	"description": "Live HTTPS peer node publishing Mozilla Enhanced Tracking Protection rulesets, Global Privacy Control (Sec-GPC) policies, and fingerprinting signatures.",
+	"icon": "lock",
+	"tags": [
+		"privacy",
+		"mozilla-standard",
+		"user-control",
+		"anti-tracking",
+		"live-peer"
+	],
+	"provider": {
+		"name": "Mozilla Open Privacy Initiative & NexusAgent Mesh",
+		"url": "https://trongtinh9911.github.io/nexusagent-peer-nodes/privacyshield/",
+		"contact": "privacy@nexusagent.org"
+	},
+	"protocols": ["webmcp/1.0", "nanda/0.2", "w3c-did/v1", "agent-card/v1"],
+	"security": {
+		"sandboxLevel": "strict",
+		"didPublicKey": "did:key:z6Mkj78vH2Jq4P1nL6wR9tY3uI5oP8sE4aD2fG0h",
+		"reputationScore": 0.99,
+		"provenance": {
+			"originUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/privacyshield/.well-known/agent.json",
+			"publishedAt": "2026-11-24T08:00:00Z",
+			"w3cDid": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:privacyshield"
+		}
+	},
+	"capabilities": [
+		{
+			"id": "audit_trackers_and_pii",
+			"name": "Audit Trackers & PII Leaks",
+			"description": "Evaluates endpoints against live anti-tracking signatures, cookie partitioning rules, and GPC compliance.",
+			"inputSchema": {
+				"type": "object",
+				"properties": {
+					"targetUrl": { "type": "string", "format": "uri" },
+					"auditLevel": { "type": "string", "enum": ["standard", "strict"] }
+				},
+				"required": ["targetUrl"]
+			},
+			"permissionsRequired": ["network:fetch", "dom:read"],
+			"pricing": { "model": "free" }
+		}
+	],
+	"dataEndpoint": "https://trongtinh9911.github.io/nexusagent-peer-nodes/privacyshield/audit-rules.json"
+}

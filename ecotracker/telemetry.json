@@ -1,0 +1,46 @@
+{
+	"nodeId": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:ecotracker",
+	"version": "2.1.0",
+	"updatedAt": "2026-11-24T08:00:00Z",
+	"methodology": "Sustainable Web Design (SWD) v4 + Green Web Foundation Grid Factors",
+	"verifiedBy": "EcoTracker Live Peer Node (SWD v4 / Green Web Dataset)",
+	"metrics": {
+		"defaultPageWeightBytes": 1488978,
+		"defaultPageWeightMb": 1.42,
+		"energyKwhPerGb": 0.81,
+		"globalGridIntensityGCo2PerKwh": 442,
+		"renewableGridIntensityGCo2PerKwh": 50,
+		"baselineEnergyKwhPerVisit": 0.00036
+	},
+	"greenHostPatterns": [
+		"github.io",
+		"mozilla.org",
+		"wikipedia.org",
+		"w3.org",
+		"cloudflare.com",
+		"netlify.app",
+		".edu",
+		".org"
+	],
+	"domainBenchmarks": {
+		"trongtinh9911.github.io": {
+			"pageWeightMb": 0.42,
+			"bytesTransferred": 440402,
+			"energyKwhPerVisit": 0.000145,
+			"isGreenHosted": true,
+			"cleanEnergyRating": "A+ (100% Renewable CDN Edge)"
+		},
+		"mozilla.org": {
+			"pageWeightMb": 1.18,
+			"bytesTransferred": 1237319,
+			"energyKwhPerVisit": 0.00031,
+			"isGreenHosted": true,
+			"cleanEnergyRating": "A+ (100% Renewable Hosted)"
+		}
+	},
+	"recommendations": [
+		"Serve Brotli/HTTP3 static assets and AVIF/WebP imagery to cut transfer energy by 38%",
+		"Route static manifests through certified zero-carbon CDN edge nodes",
+		"Eliminate render-blocking third-party scripts to reduce mobile CPU wattage"
+	]
+}

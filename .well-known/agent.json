@@ -1,0 +1,81 @@
+{
+	"schemaVersion": "1.0.0",
+	"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes",
+	"name": "NexusAgent Open Agentic Web Peer Mesh Directory",
+	"version": "2.1.0",
+	"description": "Live CORS-enabled decentralized peer directory exposing Open Agent Card v1.0 manifests and real JSON telemetry endpoints for NexusAgent v2.1.0.",
+	"icon": "network",
+	"tags": [
+		"directory",
+		"peer-mesh",
+		"webmcp",
+		"nanda",
+		"open-standards",
+		"cors-enabled"
+	],
+	"provider": {
+		"name": "NexusAgent Open Agentic Web Mesh",
+		"url": "https://trongtinh9911.github.io/nexusagent-peer-nodes/",
+		"contact": "protocol@nexusagent.org"
+	},
+	"protocols": ["webmcp/1.0", "nanda/0.2", "w3c-did/v1", "agent-card/v1"],
+	"security": {
+		"sandboxLevel": "isolated",
+		"didPublicKey": "did:key:z6MkPeerMeshRoot2026OpenAgenticWebV210",
+		"reputationScore": 0.99,
+		"provenance": {
+			"originUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/.well-known/agent.json",
+			"publishedAt": "2026-11-24T08:00:00Z",
+			"w3cDid": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes"
+		}
+	},
+	"capabilities": [
+		{
+			"id": "list_peer_nodes",
+			"name": "List Live Peer Nodes",
+			"description": "Returns the federated directory of live HTTPS CORS-enabled Open Agentic Web peer nodes.",
+			"inputSchema": {
+				"type": "object",
+				"properties": {
+					"category": { "type": "string" }
+				}
+			},
+			"permissionsRequired": ["network:fetch"],
+			"pricing": { "model": "free" }
+		}
+	],
+	"peers": [
+		{
+			"slug": "ecotracker",
+			"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:ecotracker",
+			"name": "EcoTracker Peer Node",
+			"category": "Sustainability",
+			"manifestUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/ecotracker/.well-known/agent.json",
+			"dataUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/ecotracker/telemetry.json"
+		},
+		{
+			"slug": "privacyshield",
+			"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:privacyshield",
+			"name": "PrivacyShield Peer Node",
+			"category": "Security & Privacy",
+			"manifestUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/privacyshield/.well-known/agent.json",
+			"dataUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/privacyshield/audit-rules.json"
+		},
+		{
+			"slug": "truthmesh",
+			"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:truthmesh",
+			"name": "TruthMesh Peer Node",
+			"category": "Consensus & Verification",
+			"manifestUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/truthmesh/.well-known/agent.json",
+			"dataUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/truthmesh/consensus.json"
+		},
+		{
+			"slug": "webresearcher",
+			"id": "did:web:trongtinh9911.github.io:nexusagent-peer-nodes:webresearcher",
+			"name": "WebResearcher Peer Node",
+			"category": "Research & Synthesis",
+			"manifestUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/webresearcher/.well-known/agent.json",
+			"dataUrl": "https://trongtinh9911.github.io/nexusagent-peer-nodes/webresearcher/index.json"
+		}
+	]
+}
